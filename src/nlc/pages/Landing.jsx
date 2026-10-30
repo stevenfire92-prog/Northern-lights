@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Sparkles, Dices, Coins, Trophy, ShieldCheck, ArrowRight, Check, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import MusicSection from '../components/MusicSection';
+import ShareButtons from '../components/ShareButtons';
 
 const GAMES = [
   { icon: '🎰', name: 'Aurora Slots', desc: 'Spin the reels under the northern lights.' },
@@ -96,6 +98,18 @@ export default function Landing() {
               </Card>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Music + share */}
+      <section className="px-4 py-10">
+        <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-4">
+          <motion.div {...fadeUp}>
+            <MusicSection />
+          </motion.div>
+          <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.1 }}>
+            <ShareButtons title="Northern Lights Casino" text="Play slots, blackjack & roulette free at Northern Lights Casino — 1,000 free credits to start!" />
+          </motion.div>
         </div>
       </section>
 
