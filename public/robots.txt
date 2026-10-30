@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://northern-lights-casino.vercel.app/sitemap.xml
