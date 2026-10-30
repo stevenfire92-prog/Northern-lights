@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import AppShell from '../components/AppShell';
 import { getBalance, addCredits, getTransactions, CREDIT_PACKS, formatCredits } from '../credits';
+import { isFounder } from '../founder';
 
 export default function Wallet() {
   const [balance, setBalance] = useState(getBalance());
@@ -22,6 +23,14 @@ export default function Wallet() {
   const buy = async (pack) => {
     setBuying(pack.id);
     try {
+      // Founder: free instant grant, no checkout
+      if (isFounder()) {
+        await wait(600);
+        const total = pack.credits + pack.bonus;
+        addCredits(total, `Founder grant: ${pack.label}`);
+        toast.success(`+${formatCredits(total)} credits! Founder access 👑`);
+        return;
+      }
       // Create a Stripe checkout session for the credit pack
       const res = await fetch('/api/nlc/checkout', {
         method: 'POST',
