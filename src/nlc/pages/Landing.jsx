@@ -37,7 +37,16 @@ export default function Landing() {
         </div>
       </header>
 
-      <section className="relative pt-36 pb-20 px-4">
+      {/* Payments notice */}
+      <div className="pt-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="rounded-xl border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-center text-sm text-amber-200">
+            We're not accepting cash payments right now — play free with 2,000 credits refreshed daily.
+          </div>
+        </div>
+      </div>
+
+      <section className="relative pt-20 pb-20 px-4">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[380px] rounded-full bg-emerald-500/15 blur-[130px]" />
           <div className="absolute top-32 left-1/4 w-[280px] h-[280px] rounded-full bg-violet-500/15 blur-[100px]" />

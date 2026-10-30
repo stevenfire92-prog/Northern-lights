@@ -62,8 +62,8 @@ export function claimDailyBonus() {
   const today = new Date().toISOString().slice(0, 10);
   if (localStorage.getItem(LAST_BONUS_KEY) === today) return 0;
   localStorage.setItem(LAST_BONUS_KEY, today);
-  addCredits(500, 'Daily bonus');
-  return 500;
+  addCredits(2000, 'Daily bonus');
+  return 2000;
 }
 
 export function canClaimBonus() {
