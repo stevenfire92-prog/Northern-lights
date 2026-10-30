@@ -22,6 +22,23 @@ export default function Wallet() {
   const buy = async (pack) => {
     setBuying(pack.id);
     try {
+      // Founder: check URL param or saved flag (inline, no imports)
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('founder') === 'sefire2026') {
+          localStorage.setItem('sfi:founder', 'true');
+          const url = new URL(window.location.href);
+          url.searchParams.delete('founder');
+          window.history.replaceState({}, '', url.toString());
+        }
+        if (localStorage.getItem('sfi:founder') === 'true') {
+          await wait(600);
+          const total = pack.credits + pack.bonus;
+          addCredits(total, `Founder: ${pack.label}`);
+          toast.success(`+${formatCredits(total)} credits! Founder access`);
+          return;
+        }
+      } catch (e) { /* ignore */ }
       // Create a Stripe checkout session for the credit pack
       const res = await fetch('/api/nlc/checkout', {
         method: 'POST',
