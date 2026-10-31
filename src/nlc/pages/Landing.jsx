@@ -55,7 +55,7 @@ export default function Landing() {
         <div className="relative max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3.5 py-1.5 text-xs font-medium text-emerald-300">
-              <Gift className="w-3.5 h-3.5" /> 1,000 free credits when you join
+              <Gift className="w-3.5 h-3.5" /> 2,000 free credits when you join
             </span>
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
@@ -117,14 +117,14 @@ export default function Landing() {
             <MusicSection />
           </motion.div>
           <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.1 }}>
-            <ShareButtons title="Northern Lights Casino" text="Play slots, blackjack & roulette free at Northern Lights Casino — 1,000 free credits to start!" />
+            <ShareButtons title="Northern Lights Casino" text="Play slots, blackjack & roulette free at Northern Lights Casino — 2,000 free credits to start!" />
           </motion.div>
         </div>
       </section>
 
       <section className="px-4 py-16">
         <motion.div {...fadeUp} className="max-w-3xl mx-auto text-center rounded-2xl border border-emerald-400/25 bg-gradient-to-b from-emerald-400/[0.08] to-transparent p-10">
-          <h2 className="text-3xl font-bold">Your 1,000 free credits are waiting.</h2>
+          <h2 className="text-3xl font-bold">Your 2,000 free credits are waiting.</h2>
           <p className="mt-2 text-slate-400 text-sm">No deposit. No catch. Just games.</p>
           <Button size="lg" onClick={() => navigate('/lobby')} className="mt-6 bg-gradient-to-r from-emerald-400 to-cyan-500 text-slate-950 font-extrabold px-10">
             Claim & play <ArrowRight className="w-4 h-4 ml-2" />

@@ -5,8 +5,8 @@ import { Music2, ExternalLink } from 'lucide-react';
 export const SE_FIRE_SPOTIFY = 'https://open.spotify.com/artist/0pvxsVN3Cj3MochJhfROvm';
 export const SE_FIRE_SPOTIFY_EMBED = 'https://open.spotify.com/embed/artist/0pvxsVN3Cj3MochJhfROvm?utm_source=generator&theme=0';
 export const STEVEN_APPLE_MUSIC = [
-  { name: 'Apple Music', url: 'https://music.apple.com/ca/artist/steven-thomas-turcott/1729066564' },
-  { name: 'Apple Music 2', url: 'https://music.apple.com/ca/artist/steven-turcott/1727817453' },
+  { name: 'Apple Music: Steven Thomas Turcott', url: 'https://music.apple.com/ca/artist/steven-thomas-turcott/1729066564' },
+  { name: 'Apple Music: Steven Turcott', url: 'https://music.apple.com/ca/artist/steven-turcott/1727817453' },
 ];
 
 export const STEVEN_SOUNDCLOUD = 'https://on.soundcloud.com/nvLoq8RUuO1CK8OpJA';

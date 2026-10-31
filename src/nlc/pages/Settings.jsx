@@ -20,7 +20,7 @@ export default function Settings() {
   const reset = () => {
     if (confirm('Reset all credits, progress and settings?')) {
       ['nlc:credits', 'nlc:last_bonus', 'nlc:transactions', 'nlc:level', 'nlc:xp', 'nlc:skill'].forEach((k) => localStorage.removeItem(k));
-      toast.success('Fresh start — 1,000 credits waiting for you.');
+      toast.success('Fresh start — 2,000 credits waiting for you.');
       setTimeout(() => window.location.reload(), 800);
     }
   };
