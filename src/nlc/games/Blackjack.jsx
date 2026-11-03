@@ -163,7 +163,7 @@ export default function Blackjack() {
                 </Button>
               </>
             ) : (
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <Button onClick={hit} className="h-13 py-3.5 text-lg font-bold bg-violet-500 hover:bg-violet-400">Hit</Button>
                 <Button onClick={stand} variant="outline" className="h-13 py-3.5 text-lg font-bold border-white/20">Stand</Button>
               </div>
