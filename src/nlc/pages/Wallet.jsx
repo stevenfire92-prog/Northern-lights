@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Coins, CreditCard, Loader2, Check, History } from 'lucide-react';
+import { Coins, CreditCard, Loader2, Check, History, Crown } from 'lucide-react';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import PayPalCheckout from '@/components/PayPalCheckout';
 import AppShell from '../components/AppShell';
 import { getBalance, addCredits, getTransactions, CREDIT_PACKS, formatCredits } from '../credits';
 
@@ -81,8 +82,22 @@ export default function Wallet() {
           </CardContent>
         </Card>
 
-        <h2 className="font-bold mb-3">Buy credits</h2>
-        <div className="grid sm:grid-cols-2 gap-3">
+        <Card className="border-amber-400/25 bg-gradient-to-b from-amber-400/[0.07] to-white/[0.02] mb-6">
+          <CardContent className="p-6 flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <h3 className="font-bold text-lg flex items-center gap-2">
+                <Crown className="w-5 h-5 text-amber-300" /> Go VIP
+              </h3>
+              <p className="text-sm text-slate-400 mt-1 max-w-md">
+                Unlock VIP perks: exclusive high-roller tables, daily bonus credit drops,
+                and priority support. Entertainment only — no cash value.
+              </p>
+            </div>
+            <PayPalCheckout appName="Northern Lights Casino" />
+          </CardContent>
+        </Card>
+
+        <h2 className="font-bold mb-3">Buy credits</h2>        <div className="grid sm:grid-cols-2 gap-3">
           {CREDIT_PACKS.map((pack, i) => (
             <motion.div key={pack.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.06 }}>
               <Card className={`border-white/10 bg-white/[0.03] hover:border-emerald-400/40 transition-colors ${pack.id === 'pack_3' ? 'border-emerald-400/30' : ''}`}>
