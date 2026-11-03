@@ -63,8 +63,8 @@ export default function Landing() {
             <span className="bg-gradient-to-r from-emerald-300 via-cyan-300 to-violet-300 bg-clip-text text-transparent">the northern lights.</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mt-6 text-lg text-slate-400 max-w-2xl mx-auto">
-            Slots, blackjack and roulette — pure entertainment. Win credits, climb levels,
-            chase streaks. No real-money gambling, ever.
+            A social casino under the aurora. Slots, Blackjack, Roulette — all with virtual
+            credits, zero real money, pure entertainment.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mt-8">
             <Button size="lg" onClick={() => navigate('/lobby')} className="bg-gradient-to-r from-emerald-400 to-cyan-500 text-slate-950 font-extrabold text-base px-10 h-13">
