@@ -1,6 +1,6 @@
 // Northern Lights Casino API — single function (Vercel Hobby limit).
-// POST /api/nlc/checkout — create a Stripe Checkout session for a credit pack.
-// Falls back to demo mode when Stripe isn't configured.
+// POST /api/nlc/checkout — create a checkout session for a credit pack.
+// Falls back to demo mode when payments aren't configured.
 import Stripe from 'stripe';
 
 const PACKS = {
@@ -65,7 +65,7 @@ export default async function handler(req, res) {
     }
   }
 
-  // Stripe webhook for completed credit purchases
+  // Webhook for completed credit purchases
   if (route === 'webhook' && req.method === 'POST') {
     return send(res, 200, { received: true });
   }

@@ -40,7 +40,7 @@ export default function Wallet() {
           return;
         }
       } catch (e) { /* ignore */ }
-      // Create a Stripe checkout session for the credit pack
+      // Create a checkout session for the credit pack
       const res = await fetch('/api/nlc/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
